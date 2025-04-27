@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+    /* background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+h1{
+    font-size: 34px;
+}
+
+p{
+    font-size: 22px;
+    font-style: italic;
+}
+
+.cubesGame{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.cubesGame img{
+    width: 100px;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.result-box {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #333;
+    transition: all 0.3s ease;
+}
