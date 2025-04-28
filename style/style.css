@@ -1,8 +1,9 @@
 body{
     text-align: center;
-    /* background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover; */
+    background-image: url(../img/phone.jpg);
+    background-size: cover;
+    color: #ffb700;
+    margin-top: 100px;
 }
 
 h1{
@@ -10,6 +11,10 @@ h1{
 }
 
 p{
+    font-size: 22px;
+}
+
+span{
     font-size: 22px;
     font-style: italic;
 }
@@ -24,23 +29,70 @@ p{
     width: 100px;
 }
 
-button{
-    padding: 10px 20px;
-    font-size: 16px;
+.cube-roll {
+    animation: spinDice 0.8s ease-out;
+}
+
+@keyframes spinDice {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(360deg) scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: rotate(720deg) scale(1);
+        opacity: 1;
+    }
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff004c, #ffb700);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 0, 76, 0.5);
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    animation: glowPulse 1.5s infinite ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ffb700, #ff004c);
 }
 
 .result-box {
     display: none;
-    margin-top: 20px;
-    padding: 15px;
-    font-size: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 22px;
     text-align: center;
     font-weight: bold;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    color: #333;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff004c, #ffb700);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 0, 76, 0.5);
     transition: all 0.3s ease;
+    width: 500px;
+    animation: glowPulse 1.5s infinite ease-in-out;
 }
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 0, 76, 0.7), 0 0 20px rgba(255, 183, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 0, 76, 1), 0 0 30px rgba(255, 183, 0, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 76, 0.7), 0 0 20px rgba(255, 183, 0, 0.6);
+    }
+}
+
